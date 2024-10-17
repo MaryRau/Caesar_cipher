@@ -23,10 +23,6 @@ import javafx.stage.Stage;
 public class StartController {
     StringBuilder stringBuilder = new StringBuilder();
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
     @FXML
     private ResourceBundle resources;
 
@@ -61,6 +57,14 @@ public class StartController {
             try {
                 stringBuilder.append(Files.readString(selectedFile.toPath()));
                 System.out.println("Содержимое файла:\n" + stringBuilder);
+
+                StringBuilder decryptedTextBuilder = new StringBuilder();
+                for (String text : bruteForceDecryption(stringBuilder.toString())) {
+                    decryptedTextBuilder.append(text);
+                    decryptedTextBuilder.append("; \n");
+                }
+
+                txtDecoded.setText(decryptedTextBuilder.toString());
             } catch (IOException e) {
                 e.printStackTrace();
             }
