@@ -137,6 +137,7 @@ public class StartController {
         return sb.toString();
     }
 
+    @FXML
     void saveFile(ActionEvent event) {
         if (!stringBuilder.isEmpty()) {
             try {

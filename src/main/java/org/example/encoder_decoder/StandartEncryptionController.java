@@ -18,7 +18,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class HelloController {
+public class StandartEncryptionController {
     StringBuilder stringBuilder = new StringBuilder();
 
     private Stage stage;
