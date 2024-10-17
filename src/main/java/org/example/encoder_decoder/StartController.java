@@ -61,7 +61,7 @@ public class StartController {
                 StringBuilder decryptedTextBuilder = new StringBuilder();
                 for (String text : bruteForceDecryption(stringBuilder.toString())) {
                     decryptedTextBuilder.append(text);
-                    decryptedTextBuilder.append("; \n");
+                    decryptedTextBuilder.append("; ");
                 }
 
                 txtDecoded.setText(decryptedTextBuilder.toString());
